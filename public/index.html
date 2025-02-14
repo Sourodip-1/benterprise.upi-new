@@ -3,41 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roy Ply Payment Collection</title>
+    <title>Roy Ply Payment</title>
+    <script async src="https://pay.google.com/gp/p/js/pay.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Payment Card -->
     <div class="container">
         <div class="card">
-            <div class="logo">
-                <img src="logo.png" alt="Roy Ply Logo">
-            </div>
-            <h1>Roy Ply Payment Collection</h1>
-            <p>Secure & Quick UPI Payments</p>
-
-            <div class="form-group">
-                <label for="amount">Enter Amount (₹):</label>
-                <input type="number" id="amount" placeholder="Enter amount" required>
-            </div>
-
-            <a id="upiLink" href="#" class="pay-button">Pay Now</a>
+            <h2>Pay with Google Pay</h2>
+            <p>Click the button below to pay securely.</p>
+            <div id="gpay-button"></div> <!-- Google Pay Button -->
         </div>
     </div>
 
-    <script>
-        document.querySelector(".pay-button").addEventListener("click", function(event) {
-            let amount = document.getElementById("amount").value;
-            if (amount === "" || amount <= 0) {
-                alert("Please enter a valid amount.");
-                event.preventDefault();
-            } else {
-                let upiID = "9732012478.eazypay@icici"; // Replace with your actual UPI ID
-                let upiLink = `upi://pay?pa=${upiID}&pn=Roy Ply&am=${amount}&cu=INR`;
-                document.getElementById("upiLink").setAttribute("href", upiLink);
-            }
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
