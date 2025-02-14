@@ -15,11 +15,11 @@ function onGooglePayButtonClick() {
         allowedPaymentMethods: [{
             type: 'UPI',
             parameters: {
-                pa: 'yourupiid@upi', // Replace this with your actual UPI ID
+                pa: '9732012478.eazypay@icici', // Replace this with your actual UPI ID
                 pn: 'Roy Ply Payment',
                 tr: '123456789', // Unique transaction ID (random each time)
                 tn: 'Payment for Roy Ply Products',
-                url: 'https://roy-ply-payment.vercel.app'
+                url: 'https://benterprise-upi-new.vercel.app'
             }
         }]
     };
